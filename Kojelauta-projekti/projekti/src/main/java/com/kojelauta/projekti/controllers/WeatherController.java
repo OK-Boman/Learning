@@ -23,7 +23,7 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("weather")
 public class WeatherController {
 
-    static String apiKey = "830be1952a7f700cc9074ffb1d356325";
+    static String apiKey = "xxxxx";
     private String city = "Helsinki";
 
     @GetMapping("/{userCity}")
