@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../js/scripts.js"></script>
+    <!--Google credentialin id -->
+    <meta name="google-signin-client_id"
+        content="451279499277-erue0nnro493cel996dcbk6aj28iji58.apps.googleusercontent.com" />
+
+
+    <title>Kojelauta / Smart Mirror</title>
+
+    <link rel="stylesheet" href="../css/mirror.css">
+    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <!--Avaa responsen luettavaksi dataksi-->
+    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+
+    <!-- poista kommenteista jos haluat mainoksen 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1310848471470635"
+     crossorigin="anonymous"></script>
+    -->
+
+</head>
+
+<body>
+
+    <!--googlen kirjautuminen toimii tässä-->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <div class="grid-container">
+
+        <div class="box" id="box1">00:00</div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box">
+            <div id="outputti">"Any sufficiently advanced technology is indistinguishable from magic."</br>- Arthur
+                Clarke -</div>
+        </div>
+        <div class="box"><div id="tekstitv"><img src="" id="tekstitv-img"></div></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+       <!-- <div class="boxad">
+             poista kommenteista jos haluat mainoksen
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1310848471470635"
+                crossorigin="anonymous"></script>
+
+            <ins class="adsbygoogle" style="display:inline-block;width:225px;height:225px"
+                data-ad-client="ca-pub-1310848471470635" data-ad-slot="4880479944"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            
+        </div>
+    -->
+
+    </div>
+
+    <div class="blocker" onclick="hideMenu()"></div>
+    <div class="nav">
+        <input type="checkbox" class="toggler"/>
+        <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div class="links">
+          <ul>
+            <li><a href="index.html">Horizontal</a></li>
+            <li><a href="index-mirror.html" id="atmmirror">Smart Mirror</a></li>
+            <li><a href="index-vertical.html">Vertical</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><span>
+                <!--kirjautumisnappi-->
+
+                <div id="g_id_onload"
+                    data-client_id="451279499277-erue0nnro493cel996dcbk6aj28iji58.apps.googleusercontent.com"
+                    data-callback="handleCredentialResponse">
+                    <script type="module">
+                        import jwtDecode from 'https://esm.run/jwt-decode';
+                        window.handleCredentialResponse = (response) => {
+
+                            let responsePayload = jwtDecode(response.credential);
+                            console.log("Email: " + responsePayload.email);
+                            postUser(responsePayload.sub, responsePayload.email)
+                            let userId = responsePayload.sub
+                            sessionStorage.setItem('userId', userId);
+                            var obj = sessionStorage.userId;
+                            window.location.replace('index-user.html');
+                        }
+                    </script>
+                    <div class="g_id_signin" data-type="standard"></div>
+                </div>
+            </span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="../js/toolsscripts.js"></script>
+    <script src="../js/tekstitv.js"></script>
+</body>
+</html>

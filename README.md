@@ -1,2 +1,2 @@
 # Learning
-Projects, tests and everything else form 23.1.23 ->
+Projects, tests and everything else from 23.1.23 ->

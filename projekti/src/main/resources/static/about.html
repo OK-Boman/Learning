@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../js/scripts.js"></script>
+    <!--Google credentialin id -->
+    <meta name="google-signin-client_id"
+        content="451279499277-erue0nnro493cel996dcbk6aj28iji58.apps.googleusercontent.com" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Kojelauta / About</title>
+
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <!--Avaa responsen luettavaksi dataksi-->
+    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+</head>
+
+<body>
+    <!--googlen kirjautuminen toimii tässä-->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <div class="grid-container">
+        <div class="box">
+            <h2>About the page</h2>
+            </br>
+            <p>Tämä sivusto on luotu Academic Work Academyn
+                Java-kurssin lopputyönä tammikuussa 2023.
+                </br></br>
+                Kojelauta.com on luotu helpottamaan ja nopeuttamaan tiedonsaantia jokapäiväisistä asioista.
+                Tällä hetkellä sovelluksemme avulla voi saada tietoa paikallisesta julkisesta liikenteestä, säästä,
+                kellonajasta, uutisista ja osakehinnoista sekä ihastella kuuluisuuksien viisaita sanoja
+                , mustavalkoisia kuvia sekä vitsejä.
+                </br></br>
+                Sivuston minimalistisen ja tumman teeman takana on ajatus siitä että sivuston esittämä data olisi
+                selkeästi luettavissa ympäristöstä riippumatta. Tietyissä näytöissä musta taustaväri säästää myös sähkön
+                kulutuksessa ja näytön
+                eliniässä.
+                </br></br>
+                Lisätietopyyntöjä ja palautetta saa lähettää osoitteeseen boman.kristian@gmail.com.
+
+            </p>
+        </div>
+        <div class="box">
+            <h2>About us</h2>
+            </br>
+            <p>Kojelauta Crew koostuu neljästä aloittelevasta IT-velhosta jotka kohtasivat toisensa
+                Academic Work Academyn Java-kurssilla syksyllä 2022.
+                </br></br>
+                - Reijo / "El Mago" on vastannut mm. API:en-toimivuudesta ja projektiryhmän viihdyttämisestä.
+                </br></br>
+                - Taito / "El Diseñador" tunnetaan projektin CTO:na eli tekkimestarina.
+                </br></br>
+                - Sakari / "El Cocinero" on vastannut sivuston tietokannan arkkitehtuurista ja rakentamisesta.
+                </br></br>
+                - Kristian / "El Maestro" on ollut pääarkkitehtina www-sivuston ulkoasussa ja toiminnallisuudessa.
+            </p>
+        </div>
+        <div class="box">
+            <h2>Next up</h2>
+            </br>
+            <p>Kojelauta.comin tulevaisuus riippuu paljolti käyttäjämääristä, mutta muutamat jatkokehitysideat on jo
+                tässa vaiheesse hyvä listata
+                esille:
+                </br></br>
+                - Premium-tili jossa mainosruutu on poistettu ja käyttäjälle avautuu yksi lisääruutu kustomoitavaksi.
+                </br>
+                - Lisää valinnanvaraa api-valintoihin esim. oma kalenteri, laskin, minipelejä, musiikkisoitin,
+                muistiinpano yms.
+                </br>
+                - Käyttäjälle vapaus valita taustakuva, teemoja tai värimaailmoja omalle kojelaudalle.
+                </br>
+                - Eri oletusasetelmia käytettäväksi esim. Älypeilin-taustalla tai kapealla näytöllä.
+                </br>
+                - Kielivalintoja sekä mahdollisuus valita muiden kaupunkien julkinen liikenne.
+                </br>
+            </p>
+        </div>
+        <div class="box">
+            <h2>Data</h2>
+            </br>
+            <p>Kirjautuessasi Google-tililläsi tallennamme tietokantaamme vain sähköpostiosoitteesi ja sivustoon
+                liittyvät
+                henkilökohtaiset ruutuvalinnat.
+                </br></br>Näyttämämme tiedon eli datan saamme avoimista ohjelmointirajapinnoista (API) ympäri maailmaa:
+                </br>
+                - HSL : https://www.hsl.fi/en/hsl/open-data
+                </br>
+                - Kuva : https://picsum.photos/
+                </br>
+                - Quote : https://github.com/lukePeavey/quotable
+                </br>
+                - Sää : https://openweathermap.org/api
+                </br>
+                - Stock, Prices & Joke : https://www.finnhub.io/ & https://api-ninjas.com/
+                </br>
+                - Teksti-TV : https://yle.fi/aihe/tekstitv
+            </p>
+        </div>
+
+    </div>
+    <div class="blocker" onclick="hideMenu()"></div>
+    <div class="nav">
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div class="links">
+                <ul>
+                    <li><a href="index.html">Horizontal</a></li>
+                    <li><a href="index-mirror.html">Smart Mirror</a></li>
+                    <li><a href="index-vertical.html">Vertical</a></li>
+                    <li><a href="about.html" id="atmabout">About</a></li>
+                    <li><span>
+                            <!--kirjautumisnappi-->
+                            <div id="g_id_onload"
+                                data-client_id="451279499277-erue0nnro493cel996dcbk6aj28iji58.apps.googleusercontent.com"
+                                data-callback="handleCredentialResponse">
+                                <script type="module">
+                                    import jwtDecode from 'https://esm.run/jwt-decode';
+                                    window.handleCredentialResponse = (response) => {
+
+                                        let responsePayload = jwtDecode(response.credential);
+                                        console.log("Email: " + responsePayload.email);
+                                        postUser(responsePayload.sub, responsePayload.email)
+                                        let userId = responsePayload.sub
+                                        sessionStorage.setItem('userId', userId);
+                                        var obj = sessionStorage.userId;
+                                        window.location.replace('index-user.html');
+                                    }
+                                </script>
+                                <div class="g_id_signin" data-type="standard"></div>
+                            </div>
+                        </span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

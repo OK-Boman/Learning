@@ -1,0 +1,9 @@
+# google cloud buildin konffi
+steps:
+- name: 'gcr.io/cloud-builders/mvn'
+  dir: 'projekti'
+  args: ['-DenvTarget=gcp', 'clean', 'package']
+- name: 'gcr.io/cloud-builders/gcloud'
+  dir: 'projekti'
+  args: ['app','deploy']
+  
