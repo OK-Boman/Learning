@@ -2,7 +2,7 @@
 
 Building AI course project
 
-![ai-course logo](/elements.logo.jpg)
+![ai-course logo](/elements.jpg)
 
 ## Summary
 
