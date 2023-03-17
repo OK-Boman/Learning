@@ -6,32 +6,32 @@ Building AI course project
 
 An app for teaching and a learning analyzer that improves and fits the assignments over time for individuals.
 
-## Background:
+### Background:
 
 The app tries to make teaching easier and inclusive while making learning more fun and effective.
 The topic is intresting and relevant because quality learning should be a universal norm.
 
-## Data and AI techniques:
+### Data and AI techniques:
 
 Starting data would be a large amount of exercises in math and other subjects that have unambiguous questions.
 The app should also need a 
 
-## How is it used:
+### How is it used:
 
 By students of all ages in school and after school. The program should propably use a neural network in learning to become more precise.
 The full app would propably use several different techniques combined.
 
-## Challenges:
+### Challenges:
 
 It does not solve problems in learning, but it might give a red flag for the teacher to notice.
 
-## What next:
+### What next:
 
 The first step would be to create the app without the AI, then implement the AI to give better assignments.
 After this it is just scaling up and adding subjects, assignments and stakeholders to the platform.
 Another AI-implementation would be to create an AI that writes problems and assignments for the app.
 
-## Where to start:
+### Where to start:
 
 ```
 
