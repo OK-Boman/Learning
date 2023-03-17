@@ -1,5 +1,9 @@
 # AI-Math-Learning
 
+Building AI course project
+
+## Summary
+
 An app for teaching and a learning analyzer that improves and fits the assignments over time for individuals.
 
 ## Background:
