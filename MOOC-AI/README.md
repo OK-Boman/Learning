@@ -2,6 +2,8 @@
 
 Building AI course project
 
+![ai-course logo](/elements.logo.jpg)
+
 ## Summary
 
 An app for teaching and a learning analyzer that improves and fits the assignments over time for individuals.
