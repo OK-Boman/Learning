@@ -2,7 +2,7 @@
 
 Building AI course project
 
-![ai-course logo](/elements.jpg)
+![ai-course logo](https://github.com/OK-Boman/Learning/blob/main/MOOC-AI/elements.jpg)
 
 ## Summary
 
