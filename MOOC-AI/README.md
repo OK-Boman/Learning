@@ -1,6 +1,6 @@
 # AI-Math-Learning
 
-Building AI course project
+This Building AI course project is a short assignment inside the MOOC from University of Helsinki.
 
 ![ai-course logo](https://github.com/OK-Boman/Learning/blob/main/MOOC-AI/elements.jpg)
 
