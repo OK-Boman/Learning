@@ -1,0 +1,4 @@
+com\HLN\EPrice\EPriceApplication.class
+com\HLN\EPrice\entities\EPrice.class
+com\HLN\EPrice\repositories\EPriceRepository.class
+com\HLN\EPrice\controllers\EPriceController.class

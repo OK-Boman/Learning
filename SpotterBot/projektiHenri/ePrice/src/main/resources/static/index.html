@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ePrice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script>
+
+            let servicesRoot = "/EPrice";
+
+            function makeTheCall(url, method, data) {
+                return new Promise(function (resolve, reject) {
+                    let x = new XMLHttpRequest();
+                    x.onreadystatechange = function () {
+                        if (x.readyState === 4) {
+                            try {
+                                let obj = JSON.parse(x.responseText);
+                                resolve(obj);
+                            } catch (ex) {
+                                reject(x);
+                            }
+                        }
+                        ;
+                    };
+                    x.open(method, servicesRoot + url, true);
+                    x.setRequestHeader("Content-Type", "application/json");
+                    x.setRequestHeader("Accept", "application/json");
+                    x.send(data && JSON.stringify(data));
+                });
+            }
+
+            let HTTP = {
+                get: url => makeTheCall(url, "get"),
+                put: (url, data) => makeTheCall(url, "put", data),
+                post: (url, data) => makeTheCall(url, "post", data),
+                delete: (url) => makeTheCall(url, "delete")
+            };
+
+            function fillBooks() {
+                HTTP.get("/eprice").then(prices => {
+                    let html = '';
+                    prices.forEach(price => {
+                        html += `<option value="${eprice.id}">${eprice.price}</option>`;
+                    });
+                    document.getElementById("eprice").innerHTML = html;
+                });
+            }
+
+            function getEPrice(id) {
+                HTTP.get("/eprice/" + id).then(book => {
+                    document.getElementById("bookId").value = book.id;
+                    document.getElementById("title").value = book.title;
+                    document.getElementById("authors").value = book.authorId;
+                });
+            }
+
+            function selectedChange() {
+                let id = document.getElementById("eprice").value;
+                getPrice(id);
+            }
+
+            function saveClicked() {
+                let id = document.getElementById("priceId").value;
+                let price = document.getElementById("price").value;
+                let month = document.getElementById("month").value;
+                let year = document.getElementById("year").value;
+                let eprice = {id, price, month, year};
+                HTTP.put("/eprice/" + id, EPrice).then(e => {
+                    console.log("Price saved");
+                    fillBooks();
+                });
+            }
+
+            window.onload = function () {
+                fillBooks();
+                document.getElementById("eprice").addEventListener("change", selectedChange);
+                document.getElementById("saveButton").addEventListener("click", saveClicked);
+            };
+        </script>
+        <style>
+            body{
+                background: url("turbine3.jpg") no-repeat center center fixed;
+                background-size: cover;
+            }
+            main{
+                text-align: center;
+                font-family: verdana;
+                vertical-align: center;
+            }
+            header{
+                color: #DFE6EF;
+                text-align: center;
+            }
+            label{
+                color: #DFE6EF;
+            }
+            footer{
+                color: #DFE6EF;
+                font-family: verdana;
+                text-align: center;
+                position: fixed;
+                width: 100%;
+                left:0;
+                bottom: 0;
+                font-size: 15px;
+                
+            }
+            img{
+                max-height: 100%;
+                max-width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img src="filename.png" alt="filename" align="center"/>
+                <h1>SääSovellus</h1>
+            </header>
+            <!--<nav>
+                <a href="index.html">Kirjat</a>
+                <a href="persons.html">Henkilöt</a>
+                <a href="indexold.jsp">Vanha index.jsp</a>
+                <a href="demo.html">Demo</a>
+                <a href="ajaxclient.html">AjaxClient</a>
+                <a href="imageclient.html">Image client</a>
+            </nav> -->
+            <main>
+                <section class="form">
+                    <input type="hidden" id="priceId" />
+                    <div class="input">
+                        <label for="year">Year</label>
+                        <input id="year" />
+                    </div>
+                    <div class="input">
+                        <label for="month">Month</label>
+                        <select id="month"></select>
+                    </div>
+                    <div class="buttons">
+                        <!<!-- save vaihdettu searchiin -->
+                        <input id="saveButton" type="button" value="Search" />
+                        <input type="button" value="Delete" />
+                    </div>
+                </section>
+                <section class="listing">
+                    <select id="eprice" size="10">
+
+                    </select>
+                </section>
+            </main>
+            <footer>
+                <a href="https://www.ilmatieteenlaitos.fi/havaintojen-lataus"><img src="fmi-logo.png" alt="FMI" style="width:42px;height:42px;"></a>
+                <br>Solja, Henri & Kristian</footer>
+        </div>
+    </body>
+</html>

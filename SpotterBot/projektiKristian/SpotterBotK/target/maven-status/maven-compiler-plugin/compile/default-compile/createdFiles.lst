@@ -1,0 +1,4 @@
+com\HKS\SpotterBotK\ProjektiKApplication.class
+com\HKS\SpotterBotK\controllers\ProekaController.class
+com\HKS\SpotterBotK\Entities\Proeka.class
+com\HKS\SpotterBotK\repositories\ProekaRepository.class

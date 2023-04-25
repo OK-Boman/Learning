@@ -1,0 +1,31 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Nov 17, 2022, 10:47:08 AM
+    Author     : Solja
+*/
+
+table{
+    width: 600px;
+}
+
+table th{
+    text-align: left;
+}
+
+h2{
+    font-size: 12pt;
+    color: #00FF00;
+}
+
+div {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 50px;
+}
+
+div p {
+    color:#0000FF;
+}

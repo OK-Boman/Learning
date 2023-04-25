@@ -1,0 +1,23 @@
+
+table{
+    width: 600px;
+}
+
+table th{
+    text-align: left;
+}
+
+h2{
+    font-size: 12pt;
+    color: #00FF00;
+}
+
+div {
+    border: 0.2px solid black;
+    padding: 20px;
+    margin: 50px;
+}
+
+div p {
+    color:#0000FF;
+}

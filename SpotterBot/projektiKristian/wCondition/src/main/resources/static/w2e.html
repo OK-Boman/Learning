@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+
+            let servicesRoot = "";
+
+            function makeTheCall(url, method, data) {
+                return new Promise(function (resolve, reject) {
+                    let x = new XMLHttpRequest();
+                    x.onreadystatechange = function () {
+                        if (x.readyState == 4) {
+                            try {
+                                let obj = JSON.parse(x.responseText);
+                                resolve(obj);
+                            } catch (ex) {
+                                reject(x);
+                            }
+                        }
+                        ;
+                    }
+                    x.open(method, servicesRoot + url, true);
+                    x.setRequestHeader("Content-Type", "application/json");
+                    x.setRequestHeader("Accept", "application/json");
+                    x.send(data && JSON.stringify(data));
+                });
+            }
+
+            let HTTP = {
+                get: url => makeTheCall(url, "get"),
+                put: (url, data) => makeTheCall(url, "put", data),
+                post: (url, data) => makeTheCall(url, "post", data),
+                delete: (url) => makeTheCall(url, "delete")
+            };
+
+            function fillWeathers() {
+                HTTP.get("/weathers").then(weathers => {
+                    let html = '';
+                    weathers.forEach(weather => {
+                        html += `<option value="${weather.id}">${weather.month}.${weather.year} / ${weather.temperature}°C / ${weather.rain}mm / ${weather.wind} m/s </option>`;
+                    });
+                    document.getElementById("weathers").innerHTML = html;
+                });
+            }
+
+            /*function fillAuthors() {
+                HTTP.get("/months").then(months => {
+                    let options = '<option value="0">Not selected</option>';
+                    months.forEach(month => {
+                        options += `<option value="${month.id}">${month.firstName + ' ' + month.lastName}</option>`;
+                    });
+                    document.getElementById("months").innerHTML = options;
+                });
+            }*/
+            
+            function getWeather(id) {
+                HTTP.get("/weathers/" + id).then(weather => {
+                    document.getElementById("id").value = weather.id;
+                    document.getElementById("month").value = weather.month;
+                    document.getElementById("year").value = weather.year;
+                    document.getElementById("temperature").value = weather.temperature;
+                    document.getElementById("wind").value = weather.wind;
+                    document.getElementById("rain").value = weather.rain;
+                });
+            }
+            
+            function getByMonthAndYear() {
+                let month = document.getElementById("month").value;
+                let year = document.getElementById("year").value;
+                HTTP.get("/weathers/month/" + month + "/year/" + year).then(weather => {
+                    document.getElementById("id").value = weather.id;
+                    document.getElementById("month").value = weather.month;
+                    document.getElementById("year").value = weather.year;
+                    document.getElementById("temperature").value = weather.temperature;
+                    document.getElementById("wind").value = weather.wind;
+                    document.getElementById("rain").value = weather.rain;
+                });
+            } 
+
+            function getHighestTemperature() {
+                HTTP.get("/weathers/highestTemperature").then(weather => {
+                    document.getElementById("highestTemperature").innerHTML = weather.temperature;
+                });
+            }
+
+            function getLowestTemperature() {
+                HTTP.get("/weathers/lowestTemperature").then(weather => {
+                    document.getElementById("lowestTemperature").innerHTML = weather.temperature;
+                });
+            }
+
+            function getHighestRain() {
+                HTTP.get("/weathers/highestRain").then(weather => {
+                    document.getElementById("highestRain").innerHTML = weather.rain;
+                });
+            }
+            
+            function getLowestRain() {
+                HTTP.get("/weathers/lowestRain").then(weather => {
+                    document.getElementById("lowestRain").innerHTML = weather.rain;
+                });
+            }
+
+            function getHighestWind() {
+                HTTP.get("/weathers/highestWind").then(weather => {
+                    document.getElementById("highestWind").innerHTML = weather.wind;
+                });
+            }
+
+            function getLowestWind() {
+                HTTP.get("/weathers/lowestWind").then(weather => {
+                    document.getElementById("lowestWind").innerHTML = weather.wind;
+                });
+            }
+            
+            function addWeather() {
+                let weather = {
+                    month: document.getElementById("month").value,
+                    year: document.getElementById("year").value,
+                    temperature: document.getElementById("temperature").value,
+                    wind: document.getElementById("wind").value,
+                    rain: document.getElementById("rain").value
+                };
+                HTTP.post("/weathers", weather).then(() => {
+                    fillWeathers();
+                });
+            }
+            
+            function updateWeather() {
+                let weather = {
+                    id: document.getElementById("id").value,
+                    month: document.getElementById("month").value,
+                    year: document.getElementById("year").value,
+                    temperature: document.getElementById("temperature").value,
+                    wind: document.getElementById("wind").value,
+                    rain: document.getElementById("rain").value
+                };
+                HTTP.put("/weathers", weather).then(() => {
+                    fillWeathers();
+                });
+            }
+            
+            function deleteWeather() {
+                let id = document.getElementById("id").value;
+                HTTP.delete("/weathers/" + id).then(() => {
+                    fillWeathers();
+                });
+            }
+
+            function selectedChange() {
+                let id = document.getElementById("weathers").value;
+                getWeather(id);
+            }
+
+            function saveClicked() {
+                let id = document.getElementById("id").value;
+                let month = document.getElementById("month").value;
+                let year = document.getElementById("year").value;
+                let temperature = document.getElementById("temperature").value;
+                let wind = document.getElementById("wind").value;
+                let rain = document.getElementById("rain").value;
+                let weather = {id, month, year, temperature, rain, wind};
+                HTTP.put("/weathers/" + id, weather).then(b => {
+                    console.log("Weather report saved");
+                    fillWeathers();
+                });
+            }
+
+            window.onload = function () {
+                fillWeathers();
+                document.getElementById("weathers").addEventListener("change", selectedChange);
+                document.getElementById("searchButton").addEventListener("click", searchClicked);
+            }
+        </script>
+        <style>
+            body{
+                background: url("grass.jpg") no-repeat center center fixed;
+                background-size: cover;
+            }
+            main{
+                text-align: center;
+                font-family: verdana;
+                vertical-align: center;
+            }
+            header{
+                color:black;
+                text-align: center;
+            }
+            label{
+                color: black;
+            }
+            footer{
+                color: black;
+                font-family: verdana;
+                text-align: center;
+                position: fixed;
+                width: 100%;
+                left:0;
+                bottom: 0;
+                font-size: 15px;
+
+            }
+            img{
+                max-height: 100%;
+                max-width: 100%;
+            }
+            nav{
+                text-align: center;
+            }
+            a:link {
+                color: gray;
+                background-color: transparent;
+                text-decoration: none;
+                font-family: verdana;
+            }
+            a:visited {
+                color: gray;
+                background-color: transparent;
+                text-decoration: none;
+                font-family: verdana;
+            }
+            a:hover {
+                color: gray;
+                background-color: transparent;
+                text-decoration: none;
+                font-family: verdana;
+            }
+            a:active {
+                color: gray;
+                background-color: transparent;
+                text-decoration: none;
+                font-family: verdana;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img src="filename.png" alt="filename" align="center"/>
+                <h1>Weather 2 Electricity App</h1>
+            </header>
+            <nav>
+                <a href="index.html">wCondition&nbsp;&nbsp;</a>
+                <a href="eprice.html">&nbsp;&nbsp;ePrice&nbsp;&nbsp;</a>
+                <a href="http://localhost:8081/weathers">&nbsp;&nbsp;List&nbsp;&nbsp;</a>
+                <a href="ajaxclient.html">&nbsp;&nbsp;AjaxClient</a><br/>
+                <br/>
+            </nav>
+            <main>
+                <section class="form">
+                    <input type="hidden" id="id" />
+                    <div class="input">
+                        <label for="month">Month</label>
+                        <input id="month" />
+                    </div>
+                    <div class="input">
+                        <label for="year">Year</label>
+                        <input id="year"/>
+                    </div>
+                    <div class="input">
+                        <label for="temperature">Temperature</label>
+                        <input id="temperature"/>
+                    </div>
+                    <div class="input">
+                        <label for="rain">Rain</label>
+                        <input id="rain"/>
+                    </div>
+                    <div class="input">
+                        <label for="wind">Wind</label>
+                        <input id="wind"/>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="addWeather()">Add</button>
+                        <input id="searchButton" type="button" value="Search" />
+                        <input type="button" id="save" value="Save" onclick="saveClicked()" />
+                <br/>
+                    </div>
+                </section>
+                <section>
+                    <select id ="weathers" size="8"></select>
+                </section>
+                <input type="button" id="delete" value="Delete" onclick="deleteWeather()" />
+            </main>
+            <footer>
+                <a href="https://www.ilmatieteenlaitos.fi/havaintojen-lataus"><img src="fmi-logo.png" alt="FMI" style="width:42px;height:42px;"></a>
+                <br>Solja, Henri & Kristian</footer>
+        </div>
+    </body>
+</html>

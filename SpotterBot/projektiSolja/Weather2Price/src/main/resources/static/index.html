@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Weather2Price</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="extra/books.css" rel="stylesheet"/>
+        <script>
+            let servicesRoot="/weather2price";
+            
+            function makeTheCall(url,method,data,cb){ // lisätty callback(cb)
+                if (!method) method="GET";
+                var x=new XMLHttpRequest();
+                x.onreadystatechange=function(){
+                    if (x.readyState==4) cb(x.responseText); //saatu tietää, että vastaus tullut
+                }
+                    x.open(method,url,true);
+                    x.setRequestHeader("Content-Type","application/json");
+                    x.setRequestHeader("Accept","application/json");
+                    x.send(data);
+            }
+            
+            window.onload=function(){
+                makeTheCall("/BandsWeb/api/author","get",null,function(resp) {
+                    console.log(resp);
+                    let.ar=JSON.parse(resp);
+                });
+            }
+            
+            let HTTP={
+                get: url => makeTheCall(url,"get"),
+                put: (url,data) => makeTheCall(url,"put",data),
+                post: (url,data) => makeTheCall(url,"post",data),
+                delete: (url) => makeTheCall(url,"delete")
+            };            
+        </script>
+        <style>
+            body{
+                background: url("turbine3.jpg") no-repeat center center fixed;
+                background-size: cover;
+            }
+            main{
+                text-align: center;
+                font-family: verdana;
+                vertical-align: center;
+            }
+            header{
+                color: #DFE6EF;
+                text-align: center;
+            }
+            label{
+                color: #DFE6EF;
+            }
+            footer{
+                color: #DFE6EF;
+                font-family: verdana;
+                text-align: center;
+                position: fixed;
+                width: 100%;
+                left:0;
+                bottom: 0;
+                font-size: 15px;
+                
+            }
+            img{
+                max-height: 100%;
+                max-width: 100%;
+            }            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img src="logo.png" alt="filename" align="center"/>
+                <h1>Sääsovellus</h1>
+            </header>
+            <!-- 
+            <nav>
+                <a href="index.html">Tähän linkkejä</a>
+            </nav> 
+            --> 
+            <main>
+                <section class="form">
+                    <input type="hidden" id="searchId" />
+                    <div class="input">
+                        <label for="wind">Wind</label>
+                        <input id="wind" />
+                    </div>
+                    <div class="input">
+                        <label for="temperature">Temperature</label>
+                        <input id="temperature" />
+                    </div>                    
+                    <div class="input">
+                        <label for="price">Price</label>
+                        <select id="price"></select>
+                    </div>
+                    <div class="buttons">
+                        <input id="filterWindButton" type="button" value="FilterWind" />
+                        <input id="filterTemperatureButton" type="button" value="FilterTemperature" />
+                    </div>
+                </section>
+                <section class="listing">
+                    <select id="price" size="10">
+                        
+                    </select>
+                </section>
+            </main>
+            <footer>HKS (Henri, Kristian, Solja)</footer>
+        </div>
+    </body>
+</html>

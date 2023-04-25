@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            
+            function makeTheCall(url,method,data){
+                return new Promise(function(resolve,reject){
+                    let x=new XMLHttpRequest();
+                    x.onreadystatechange=function(){
+                        if (x.readyState==4) {
+                            try{
+                                let obj=JSON.parse(x.responseText);
+                                resolve(obj);
+                            }
+                            catch(ex){
+                                reject(x);
+                            }
+                        };
+                    }
+                    x.open(method,url,true);
+                    x.setRequestHeader("Content-Type","application/json");
+                    x.setRequestHeader("Accept","application/json");
+                    x.send(data && JSON.stringify(data));
+                });
+            }
+            
+            let HTTP={
+                get: url => makeTheCall(url,"get"),
+                put: (url,data) => makeTheCall(url,"put",data),
+                post: (url,data) => makeTheCall(url,"post",data),
+                delete: (url) => makeTheCall(url,"delete")
+            };
+
+
+            function fillSearches() {
+                HTTP.get("/searches").then(searches => {
+                    let html = '';
+                    searches.forEach(search => {
+                        html += `<option value="${search.id}">${search.username}: ${search.weatherId}, ${search.priceId}</option>`;
+                    });
+                    document.getElementById("searches").innerHTML = html;
+                });
+            }
+           
+            function getSearch(id){ 
+                HTTP.get("/searches/"+id).then(search => {
+                    document.getElementById("searchId").value=search.id;
+                    document.getElementById("username").value=search.username; 
+                    document.getElementById("weatherId").value=search.weatherId;
+                    document.getElementById("priceId").value=search.priceId;                    
+                });
+            }
+            
+            function selectedChange(){
+                let id=document.getElementById("searches").value;
+                getSearch(id);
+            }
+            
+            function saveClicked(){
+                console.log("Save");
+                let id=document.getElementById("searchId").value;
+                let username=document.getElementById("username").value;
+                let weatherId=document.getElementById("weatherId").value;
+                let priceId=document.getElementById("priceId").value;                
+                let search={id,username,weatherId,priceId};
+                HTTP.put("/searches/"+id,search).then(search => {
+                   fillSearches(); 
+                   getSearch(id);
+                });
+            }            
+
+            function createClicked(){
+                console.log("Create");
+                let username=document.getElementById("username").value;
+                let weatherId=document.getElementById("weatherId").value;
+                let priceId=document.getElementById("priceId").value;                
+                let search={username,weatherId,priceId};
+                HTTP.post("/searches",search).then(search => {
+                   fillSearches(); 
+                   getSearch(search.id);
+                });
+            }
+            
+            function deleteClicked(){
+                console.log("Delete");
+                let id=document.getElementById("searchId").value;
+                HTTP.delete("/searches/"+id).then(resp => {
+                   console.log("Delete resp",resp);
+                   fillSearches();
+                });
+            }
+            
+
+            window.onload=function(){
+                fillSearches();
+                //document.getElementById("paintings").addEventListener("change",selectedChange);
+                //document.getElementById("saveButton").addEventListener("click",saveClicked);
+                //document.getElementById("createButton").addEventListener("click",createClicked);
+                //document.getElementById("deleteButton").addEventListener("click",deleteClicked);
+                //document.getElementById("search").addEventListener("keyup",searchChanged);
+            }
+        </script>
+        <style>
+            body{
+                background: url("grass.jpg") no-repeat center center fixed;
+                background-size: cover;
+            }
+            main{
+                text-align: center;
+                font-family: verdana;
+                vertical-align: center;
+            }
+            header{
+                color:black;
+                text-align: center;
+            }
+            label{
+                color: black;
+            }
+            footer{
+                color: black;
+                font-family: verdana;
+                text-align: center;
+                position: fixed;
+                width: 100%;
+                left:0;
+                bottom: 0;
+                font-size: 15px;
+
+            }
+            img{
+                max-height: 100%;
+                max-width: 100%;
+            }
+            nav{
+                text-align: center;
+            }
+            a:link {
+                color: gray;
+                background-color: transparent;
+                text-decoration: none;
+                font-family: verdana;
+            }
+            a:visited {
+                color: gray;
+                background-color: transparent;
+                text-decoration: none;
+                font-family: verdana;
+            }
+            a:hover {
+                color: gray;
+                background-color: transparent;
+                text-decoration: none;
+                font-family: verdana;
+            }
+            a:active {
+                color: gray;
+                background-color: transparent;
+                text-decoration: none;
+                font-family: verdana;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img src="filename.png" alt="filename" align="center"/>
+                <h1>SääSovellus</h1>
+            </header>
+            <nav>
+                <a href="index.html">wCondition</a>
+                <a href="eprice.html">ePrice</a>
+                <a href="http://localhost:8081/weathers">List</a>
+                <a href="ajaxclient.html">AjaxClient</a><br/>
+                <br/>
+            </nav>
+            <main>
+                <section class="form">
+                    <input type="hidden" id="id" />
+                    <div class="input">
+                        <label for="month">Month</label>
+                        <input id="month" />
+                    </div>
+                    <div class="input">
+                        <label for="year">Year</label>
+                        <input id="year"/>
+                    </div>
+                    <div class="input">
+                        <label for="temperature">Temperature</label>
+                        <input id="temperature"/>
+                    </div>
+                    <div class="input">
+                        <label for="rain">Rain</label>
+                        <input id="rain"/>
+                    </div>
+                    <div class="input">
+                        <label for="wind">Wind</label>
+                        <input id="wind"/>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="addWeather()">Add</button>
+                        <input id="searchButton" type="button" value="Search" />
+                        <input type="button" id="save" value="Save" onclick="saveClicked()" />
+                <br/>
+                    </div>
+                </section>
+                <section>
+                    <select id ="weathers" size="8"></select>
+                </section>
+                <input type="button" id="delete" value="Delete" onclick="deleteWeather()" />
+            </main>
+            <footer>
+                <a href="https://www.ilmatieteenlaitos.fi/havaintojen-lataus"><img src="fmi-logo.png" alt="FMI" style="width:42px;height:42px;"></a>
+                <br>Solja, Henri & Kristian</footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1447 @@
+[
+  {
+    "price": 19.95,
+    "month": 1,
+    "year": 1998
+  },
+  {
+    "price": 17.87,
+    "month": 2,
+    "year": 1998
+  },
+  {
+    "price": 15.92,
+    "month": 3,
+    "year": 1998
+  },
+  {
+    "price": 14.84,
+    "month": 4,
+    "year": 1998
+  },
+  {
+    "price": 12.26,
+    "month": 5,
+    "year": 1998
+  },
+  {
+    "price": 14.09,
+    "month": 6,
+    "year": 1998
+  },
+  {
+    "price": 8.67,
+    "month": 7,
+    "year": 1998
+  },
+  {
+    "price": 8.96,
+    "month": 8,
+    "year": 1998
+  },
+  {
+    "price": 9.87,
+    "month": 9,
+    "year": 1998
+  },
+  {
+    "price": 12,
+    "month": 10,
+    "year": 1998
+  },
+  {
+    "price": 15.49,
+    "month": 11,
+    "year": 1998
+  },
+  {
+    "price": 15.84,
+    "month": 12,
+    "year": 1998
+  },
+  {
+    "price": 15.68,
+    "month": 1,
+    "year": 1999
+  },
+  {
+    "price": 14.69,
+    "month": 2,
+    "year": 1999
+  },
+  {
+    "price": 12.18,
+    "month": 3,
+    "year": 1999
+  },
+  {
+    "price": 9.96,
+    "month": 4,
+    "year": 1999
+  },
+  {
+    "price": 10.74,
+    "month": 5,
+    "year": 1999
+  },
+  {
+    "price": 10.44,
+    "month": 6,
+    "year": 1999
+  },
+  {
+    "price": 10.4,
+    "month": 7,
+    "year": 1999
+  },
+  {
+    "price": 14.32,
+    "month": 8,
+    "year": 1999
+  },
+  {
+    "price": 16.44,
+    "month": 9,
+    "year": 1999
+  },
+  {
+    "price": 16.15,
+    "month": 10,
+    "year": 1999
+  },
+  {
+    "price": 15.35,
+    "month": 11,
+    "year": 1999
+  },
+  {
+    "price": 17.49,
+    "month": 12,
+    "year": 1999
+  },
+  {
+    "price": 18.69,
+    "month": 1,
+    "year": 2000
+  },
+  {
+    "price": 12.92,
+    "month": 2,
+    "year": 2000
+  },
+  {
+    "price": 12.49,
+    "month": 3,
+    "year": 2000
+  },
+  {
+    "price": 13.01,
+    "month": 4,
+    "year": 2000
+  },
+  {
+    "price": 14.31,
+    "month": 5,
+    "year": 2000
+  },
+  {
+    "price": 12.68,
+    "month": 6,
+    "year": 2000
+  },
+  {
+    "price": 9.77,
+    "month": 7,
+    "year": 2000
+  },
+  {
+    "price": 14.61,
+    "month": 8,
+    "year": 2000
+  },
+  {
+    "price": 18.7,
+    "month": 9,
+    "year": 2000
+  },
+  {
+    "price": 16.73,
+    "month": 10,
+    "year": 2000
+  },
+  {
+    "price": 17.21,
+    "month": 11,
+    "year": 2000
+  },
+  {
+    "price": 17.34,
+    "month": 12,
+    "year": 2000
+  },
+  {
+    "price": 20.46,
+    "month": 1,
+    "year": 2001
+  },
+  {
+    "price": 27.13,
+    "month": 2,
+    "year": 2001
+  },
+  {
+    "price": 25.78,
+    "month": 3,
+    "year": 2001
+  },
+  {
+    "price": 26.1,
+    "month": 4,
+    "year": 2001
+  },
+  {
+    "price": 21.77,
+    "month": 5,
+    "year": 2001
+  },
+  {
+    "price": 25.16,
+    "month": 6,
+    "year": 2001
+  },
+  {
+    "price": 22.32,
+    "month": 7,
+    "year": 2001
+  },
+  {
+    "price": 21.14,
+    "month": 8,
+    "year": 2001
+  },
+  {
+    "price": 19.44,
+    "month": 9,
+    "year": 2001
+  },
+  {
+    "price": 18.87,
+    "month": 10,
+    "year": 2001
+  },
+  {
+    "price": 21.59,
+    "month": 11,
+    "year": 2001
+  },
+  {
+    "price": 24.72,
+    "month": 12,
+    "year": 2001
+  },
+  {
+    "price": 24.91,
+    "month": 1,
+    "year": 2002
+  },
+  {
+    "price": 20.41,
+    "month": 2,
+    "year": 2002
+  },
+  {
+    "price": 18.62,
+    "month": 3,
+    "year": 2002
+  },
+  {
+    "price": 17.39,
+    "month": 4,
+    "year": 2002
+  },
+  {
+    "price": 15.85,
+    "month": 5,
+    "year": 2002
+  },
+  {
+    "price": 19.93,
+    "month": 6,
+    "year": 2002
+  },
+  {
+    "price": 18.39,
+    "month": 7,
+    "year": 2002
+  },
+  {
+    "price": 22.76,
+    "month": 8,
+    "year": 2002
+  },
+  {
+    "price": 25.81,
+    "month": 9,
+    "year": 2002
+  },
+  {
+    "price": 31.54,
+    "month": 10,
+    "year": 2002
+  },
+  {
+    "price": 43.25,
+    "month": 11,
+    "year": 2002
+  },
+  {
+    "price": 67.68,
+    "month": 12,
+    "year": 2002
+  },
+  {
+    "price": 69.84,
+    "month": 1,
+    "year": 2003
+  },
+  {
+    "price": 47.01,
+    "month": 2,
+    "year": 2003
+  },
+  {
+    "price": 37.57,
+    "month": 3,
+    "year": 2003
+  },
+  {
+    "price": 29.61,
+    "month": 4,
+    "year": 2003
+  },
+  {
+    "price": 28.06,
+    "month": 5,
+    "year": 2003
+  },
+  {
+    "price": 26.16,
+    "month": 6,
+    "year": 2003
+  },
+  {
+    "price": 28.14,
+    "month": 7,
+    "year": 2003
+  },
+  {
+    "price": 31.25,
+    "month": 8,
+    "year": 2003
+  },
+  {
+    "price": 29.93,
+    "month": 9,
+    "year": 2003
+  },
+  {
+    "price": 33.7,
+    "month": 10,
+    "year": 2003
+  },
+  {
+    "price": 33.87,
+    "month": 11,
+    "year": 2003
+  },
+  {
+    "price": 28.93,
+    "month": 12,
+    "year": 2003
+  },
+  {
+    "price": 28.53,
+    "month": 1,
+    "year": 2004
+  },
+  {
+    "price": 27.03,
+    "month": 2,
+    "year": 2004
+  },
+  {
+    "price": 27.28,
+    "month": 3,
+    "year": 2004
+  },
+  {
+    "price": 25.81,
+    "month": 4,
+    "year": 2004
+  },
+  {
+    "price": 26.74,
+    "month": 5,
+    "year": 2004
+  },
+  {
+    "price": 31.1,
+    "month": 6,
+    "year": 2004
+  },
+  {
+    "price": 25.93,
+    "month": 7,
+    "year": 2004
+  },
+  {
+    "price": 31.67,
+    "month": 8,
+    "year": 2004
+  },
+  {
+    "price": 28.08,
+    "month": 9,
+    "year": 2004
+  },
+  {
+    "price": 26.37,
+    "month": 10,
+    "year": 2004
+  },
+  {
+    "price": 28.13,
+    "month": 11,
+    "year": 2004
+  },
+  {
+    "price": 25.48,
+    "month": 12,
+    "year": 2004
+  },
+  {
+    "price": 23.19,
+    "month": 1,
+    "year": 2005
+  },
+  {
+    "price": 25.59,
+    "month": 2,
+    "year": 2005
+  },
+  {
+    "price": 30.76,
+    "month": 3,
+    "year": 2005
+  },
+  {
+    "price": 30.89,
+    "month": 4,
+    "year": 2005
+  },
+  {
+    "price": 30.64,
+    "month": 5,
+    "year": 2005
+  },
+  {
+    "price": 26.74,
+    "month": 6,
+    "year": 2005
+  },
+  {
+    "price": 29.99,
+    "month": 7,
+    "year": 2005
+  },
+  {
+    "price": 35.07,
+    "month": 8,
+    "year": 2005
+  },
+  {
+    "price": 29.97,
+    "month": 9,
+    "year": 2005
+  },
+  {
+    "price": 33.86,
+    "month": 10,
+    "year": 2005
+  },
+  {
+    "price": 32.07,
+    "month": 11,
+    "year": 2005
+  },
+  {
+    "price": 37,
+    "month": 12,
+    "year": 2005
+  },
+  {
+    "price": 43.09,
+    "month": 1,
+    "year": 2006
+  },
+  {
+    "price": 47.75,
+    "month": 2,
+    "year": 2006
+  },
+  {
+    "price": 53.24,
+    "month": 3,
+    "year": 2006
+  },
+  {
+    "price": 49.14,
+    "month": 4,
+    "year": 2006
+  },
+  {
+    "price": 35.17,
+    "month": 5,
+    "year": 2006
+  },
+  {
+    "price": 45.33,
+    "month": 6,
+    "year": 2006
+  },
+  {
+    "price": 49.14,
+    "month": 7,
+    "year": 2006
+  },
+  {
+    "price": 67.24,
+    "month": 8,
+    "year": 2006
+  },
+  {
+    "price": 63.72,
+    "month": 9,
+    "year": 2006
+  },
+  {
+    "price": 50.78,
+    "month": 10,
+    "year": 2006
+  },
+  {
+    "price": 46.43,
+    "month": 11,
+    "year": 2006
+  },
+  {
+    "price": 32.02,
+    "month": 12,
+    "year": 2006
+  },
+  {
+    "price": 27.46,
+    "month": 1,
+    "year": 2007
+  },
+  {
+    "price": 30.08,
+    "month": 2,
+    "year": 2007
+  },
+  {
+    "price": 23.7,
+    "month": 3,
+    "year": 2007
+  },
+  {
+    "price": 22.19,
+    "month": 4,
+    "year": 2007
+  },
+  {
+    "price": 22.02,
+    "month": 5,
+    "year": 2007
+  },
+  {
+    "price": 26.92,
+    "month": 6,
+    "year": 2007
+  },
+  {
+    "price": 22.37,
+    "month": 7,
+    "year": 2007
+  },
+  {
+    "price": 26.88,
+    "month": 8,
+    "year": 2007
+  },
+  {
+    "price": 32.24,
+    "month": 9,
+    "year": 2007
+  },
+  {
+    "price": 37.24,
+    "month": 10,
+    "year": 2007
+  },
+  {
+    "price": 45.59,
+    "month": 11,
+    "year": 2007
+  },
+  {
+    "price": 43.63,
+    "month": 12,
+    "year": 2007
+  },
+  {
+    "price": 46.12,
+    "month": 1,
+    "year": 2008
+  },
+  {
+    "price": 39.74,
+    "month": 2,
+    "year": 2008
+  },
+  {
+    "price": 31.94,
+    "month": 3,
+    "year": 2008
+  },
+  {
+    "price": 43.56,
+    "month": 4,
+    "year": 2008
+  },
+  {
+    "price": 38.37,
+    "month": 5,
+    "year": 2008
+  },
+  {
+    "price": 57.62,
+    "month": 6,
+    "year": 2008
+  },
+  {
+    "price": 59.07,
+    "month": 7,
+    "year": 2008
+  },
+  {
+    "price": 65.25,
+    "month": 8,
+    "year": 2008
+  },
+  {
+    "price": 73.37,
+    "month": 9,
+    "year": 2008
+  },
+  {
+    "price": 60.35,
+    "month": 10,
+    "year": 2008
+  },
+  {
+    "price": 52.45,
+    "month": 11,
+    "year": 2008
+  },
+  {
+    "price": 44.36,
+    "month": 12,
+    "year": 2008
+  },
+  {
+    "price": 41.08,
+    "month": 1,
+    "year": 2009
+  },
+  {
+    "price": 38.33,
+    "month": 2,
+    "year": 2009
+  },
+  {
+    "price": 34.88,
+    "month": 3,
+    "year": 2009
+  },
+  {
+    "price": 34.46,
+    "month": 4,
+    "year": 2009
+  },
+  {
+    "price": 33.13,
+    "month": 5,
+    "year": 2009
+  },
+  {
+    "price": 35.38,
+    "month": 6,
+    "year": 2009
+  },
+  {
+    "price": 33.81,
+    "month": 7,
+    "year": 2009
+  },
+  {
+    "price": 37.27,
+    "month": 8,
+    "year": 2009
+  },
+  {
+    "price": 35.6,
+    "month": 9,
+    "year": 2009
+  },
+  {
+    "price": 35.08,
+    "month": 10,
+    "year": 2009
+  },
+  {
+    "price": 36.69,
+    "month": 11,
+    "year": 2009
+  },
+  {
+    "price": 47.98,
+    "month": 12,
+    "year": 2009
+  },
+  {
+    "price": 65.78,
+    "month": 1,
+    "year": 2010
+  },
+  {
+    "price": 93.7,
+    "month": 2,
+    "year": 2010
+  },
+  {
+    "price": 55.22,
+    "month": 3,
+    "year": 2010
+  },
+  {
+    "price": 43.71,
+    "month": 4,
+    "year": 2010
+  },
+  {
+    "price": 39.47,
+    "month": 5,
+    "year": 2010
+  },
+  {
+    "price": 41.96,
+    "month": 6,
+    "year": 2010
+  },
+  {
+    "price": 48.76,
+    "month": 7,
+    "year": 2010
+  },
+  {
+    "price": 43.21,
+    "month": 8,
+    "year": 2010
+  },
+  {
+    "price": 51.2,
+    "month": 9,
+    "year": 2010
+  },
+  {
+    "price": 51.23,
+    "month": 10,
+    "year": 2010
+  },
+  {
+    "price": 56.63,
+    "month": 11,
+    "year": 2010
+  },
+  {
+    "price": 91.34,
+    "month": 12,
+    "year": 2010
+  },
+  {
+    "price": 68.92,
+    "month": 1,
+    "year": 2011
+  },
+  {
+    "price": 64.58,
+    "month": 2,
+    "year": 2011
+  },
+  {
+    "price": 60.91,
+    "month": 3,
+    "year": 2011
+  },
+  {
+    "price": 52.93,
+    "month": 4,
+    "year": 2011
+  },
+  {
+    "price": 54.42,
+    "month": 5,
+    "year": 2011
+  },
+  {
+    "price": 48.54,
+    "month": 6,
+    "year": 2011
+  },
+  {
+    "price": 42.2,
+    "month": 7,
+    "year": 2011
+  },
+  {
+    "price": 48.98,
+    "month": 8,
+    "year": 2011
+  },
+  {
+    "price": 38.86,
+    "month": 9,
+    "year": 2011
+  },
+  {
+    "price": 36.9,
+    "month": 10,
+    "year": 2011
+  },
+  {
+    "price": 42.03,
+    "month": 11,
+    "year": 2011
+  },
+  {
+    "price": 33.34,
+    "month": 12,
+    "year": 2011
+  },
+  {
+    "price": 38.82,
+    "month": 1,
+    "year": 2012
+  },
+  {
+    "price": 52.81,
+    "month": 2,
+    "year": 2012
+  },
+  {
+    "price": 36.51,
+    "month": 3,
+    "year": 2012
+  },
+  {
+    "price": 36.48,
+    "month": 4,
+    "year": 2012
+  },
+  {
+    "price": 33.34,
+    "month": 5,
+    "year": 2012
+  },
+  {
+    "price": 27.38,
+    "month": 6,
+    "year": 2012
+  },
+  {
+    "price": 13.67,
+    "month": 7,
+    "year": 2012
+  },
+  {
+    "price": 38.18,
+    "month": 8,
+    "year": 2012
+  },
+  {
+    "price": 41.03,
+    "month": 9,
+    "year": 2012
+  },
+  {
+    "price": 38.57,
+    "month": 10,
+    "year": 2012
+  },
+  {
+    "price": 36.95,
+    "month": 11,
+    "year": 2012
+  },
+  {
+    "price": 46.79,
+    "month": 12,
+    "year": 2012
+  },
+  {
+    "price": 41.59,
+    "month": 1,
+    "year": 2013
+  },
+  {
+    "price": 39.43,
+    "month": 2,
+    "year": 2013
+  },
+  {
+    "price": 45.01,
+    "month": 3,
+    "year": 2013
+  },
+  {
+    "price": 43.91,
+    "month": 4,
+    "year": 2013
+  },
+  {
+    "price": 37.35,
+    "month": 5,
+    "year": 2013
+  },
+  {
+    "price": 38.63,
+    "month": 6,
+    "year": 2013
+  },
+  {
+    "price": 37.03,
+    "month": 7,
+    "year": 2013
+  },
+  {
+    "price": 43.47,
+    "month": 8,
+    "year": 2013
+  },
+  {
+    "price": 47.76,
+    "month": 9,
+    "year": 2013
+  },
+  {
+    "price": 45.95,
+    "month": 10,
+    "year": 2013
+  },
+  {
+    "price": 38.04,
+    "month": 11,
+    "year": 2013
+  },
+  {
+    "price": 35.65,
+    "month": 12,
+    "year": 2013
+  },
+  {
+    "price": 40.23,
+    "month": 1,
+    "year": 2014
+  },
+  {
+    "price": 34.16,
+    "month": 2,
+    "year": 2014
+  },
+  {
+    "price": 31.21,
+    "month": 3,
+    "year": 2014
+  },
+  {
+    "price": 31.53,
+    "month": 4,
+    "year": 2014
+  },
+  {
+    "price": 36.62,
+    "month": 5,
+    "year": 2014
+  },
+  {
+    "price": 35.43,
+    "month": 6,
+    "year": 2014
+  },
+  {
+    "price": 36.81,
+    "month": 7,
+    "year": 2014
+  },
+  {
+    "price": 38.38,
+    "month": 8,
+    "year": 2014
+  },
+  {
+    "price": 38.33,
+    "month": 9,
+    "year": 2014
+  },
+  {
+    "price": 36.72,
+    "month": 10,
+    "year": 2014
+  },
+  {
+    "price": 35.41,
+    "month": 11,
+    "year": 2014
+  },
+  {
+    "price": 37.13,
+    "month": 12,
+    "year": 2014
+  },
+  {
+    "price": 33.8,
+    "month": 1,
+    "year": 2015
+  },
+  {
+    "price": 33.18,
+    "month": 2,
+    "year": 2015
+  },
+  {
+    "price": 29.42,
+    "month": 3,
+    "year": 2015
+  },
+  {
+    "price": 30.09,
+    "month": 4,
+    "year": 2015
+  },
+  {
+    "price": 25.87,
+    "month": 5,
+    "year": 2015
+  },
+  {
+    "price": 21.52,
+    "month": 6,
+    "year": 2015
+  },
+  {
+    "price": 27.57,
+    "month": 7,
+    "year": 2015
+  },
+  {
+    "price": 31.12,
+    "month": 8,
+    "year": 2015
+  },
+  {
+    "price": 31.75,
+    "month": 9,
+    "year": 2015
+  },
+  {
+    "price": 33.49,
+    "month": 10,
+    "year": 2015
+  },
+  {
+    "price": 31.74,
+    "month": 11,
+    "year": 2015
+  },
+  {
+    "price": 26.56,
+    "month": 12,
+    "year": 2015
+  },
+  {
+    "price": 37.83,
+    "month": 1,
+    "year": 2016
+  },
+  {
+    "price": 26.09,
+    "month": 2,
+    "year": 2016
+  },
+  {
+    "price": 27.09,
+    "month": 3,
+    "year": 2016
+  },
+  {
+    "price": 27.25,
+    "month": 4,
+    "year": 2016
+  },
+  {
+    "price": 28.06,
+    "month": 5,
+    "year": 2016
+  },
+  {
+    "price": 35.41,
+    "month": 6,
+    "year": 2016
+  },
+  {
+    "price": 30.97,
+    "month": 7,
+    "year": 2016
+  },
+  {
+    "price": 31.38,
+    "month": 8,
+    "year": 2016
+  },
+  {
+    "price": 32.52,
+    "month": 9,
+    "year": 2016
+  },
+  {
+    "price": 37.54,
+    "month": 10,
+    "year": 2016
+  },
+  {
+    "price": 41.02,
+    "month": 11,
+    "year": 2016
+  },
+  {
+    "price": 34,
+    "month": 12,
+    "year": 2016
+  },
+  {
+    "price": 33.29,
+    "month": 1,
+    "year": 2017
+  },
+  {
+    "price": 35.07,
+    "month": 2,
+    "year": 2017
+  },
+  {
+    "price": 30.68,
+    "month": 3,
+    "year": 2017
+  },
+  {
+    "price": 31.4,
+    "month": 4,
+    "year": 2017
+  },
+  {
+    "price": 30.67,
+    "month": 5,
+    "year": 2017
+  },
+  {
+    "price": 30.64,
+    "month": 6,
+    "year": 2017
+  },
+  {
+    "price": 34.17,
+    "month": 7,
+    "year": 2017
+  },
+  {
+    "price": 36.28,
+    "month": 8,
+    "year": 2017
+  },
+  {
+    "price": 37.27,
+    "month": 9,
+    "year": 2017
+  },
+  {
+    "price": 33.42,
+    "month": 10,
+    "year": 2017
+  },
+  {
+    "price": 33.67,
+    "month": 11,
+    "year": 2017
+  },
+  {
+    "price": 31.92,
+    "month": 12,
+    "year": 2017
+  },
+  {
+    "price": 37.08,
+    "month": 1,
+    "year": 2018
+  },
+  {
+    "price": 43.36,
+    "month": 2,
+    "year": 2018
+  },
+  {
+    "price": 45.6,
+    "month": 3,
+    "year": 2018
+  },
+  {
+    "price": 40.21,
+    "month": 4,
+    "year": 2018
+  },
+  {
+    "price": 38.63,
+    "month": 5,
+    "year": 2018
+  },
+  {
+    "price": 47.17,
+    "month": 6,
+    "year": 2018
+  },
+  {
+    "price": 54,
+    "month": 7,
+    "year": 2018
+  },
+  {
+    "price": 55.48,
+    "month": 8,
+    "year": 2018
+  },
+  {
+    "price": 51,
+    "month": 9,
+    "year": 2018
+  },
+  {
+    "price": 46.36,
+    "month": 10,
+    "year": 2018
+  },
+  {
+    "price": 50.08,
+    "month": 11,
+    "year": 2018
+  },
+  {
+    "price": 52.32,
+    "month": 12,
+    "year": 2018
+  },
+  {
+    "price": 55.78,
+    "month": 1,
+    "year": 2019
+  },
+  {
+    "price": 46.76,
+    "month": 2,
+    "year": 2019
+  },
+  {
+    "price": 40.01,
+    "month": 3,
+    "year": 2019
+  },
+  {
+    "price": 41.44,
+    "month": 4,
+    "year": 2019
+  },
+  {
+    "price": 39.84,
+    "month": 5,
+    "year": 2019
+  },
+  {
+    "price": 30.71,
+    "month": 6,
+    "year": 2019
+  },
+  {
+    "price": 45.91,
+    "month": 7,
+    "year": 2019
+  },
+  {
+    "price": 48.77,
+    "month": 8,
+    "year": 2019
+  },
+  {
+    "price": 48.75,
+    "month": 9,
+    "year": 2019
+  },
+  {
+    "price": 46.33,
+    "month": 10,
+    "year": 2019
+  },
+  {
+    "price": 45.71,
+    "month": 11,
+    "year": 2019
+  },
+  {
+    "price": 38.42,
+    "month": 12,
+    "year": 2019
+  },
+  {
+    "price": 27.16,
+    "month": 1,
+    "year": 2020
+  },
+  {
+    "price": 24.43,
+    "month": 2,
+    "year": 2020
+  },
+  {
+    "price": 20.38,
+    "month": 3,
+    "year": 2020
+  },
+  {
+    "price": 19.82,
+    "month": 4,
+    "year": 2020
+  },
+  {
+    "price": 19.46,
+    "month": 5,
+    "year": 2020
+  },
+  {
+    "price": 28.26,
+    "month": 6,
+    "year": 2020
+  },
+  {
+    "price": 20.21,
+    "month": 7,
+    "year": 2020
+  },
+  {
+    "price": 40.55,
+    "month": 8,
+    "year": 2020
+  },
+  {
+    "price": 37.83,
+    "month": 9,
+    "year": 2020
+  },
+  {
+    "price": 31.08,
+    "month": 10,
+    "year": 2020
+  },
+  {
+    "price": 27.62,
+    "month": 11,
+    "year": 2020
+  },
+  {
+    "price": 39.25,
+    "month": 12,
+    "year": 2020
+  },
+  {
+    "price": 51.22,
+    "month": 1,
+    "year": 2021
+  },
+  {
+    "price": 57.13,
+    "month": 2,
+    "year": 2021
+  },
+  {
+    "price": 38.35,
+    "month": 3,
+    "year": 2021
+  },
+  {
+    "price": 36.76,
+    "month": 4,
+    "year": 2021
+  },
+  {
+    "price": 45.94,
+    "month": 5,
+    "year": 2021
+  },
+  {
+    "price": 56.16,
+    "month": 6,
+    "year": 2021
+  },
+  {
+    "price": 78.76,
+    "month": 7,
+    "year": 2021
+  },
+  {
+    "price": 68.2,
+    "month": 8,
+    "year": 2021
+  },
+  {
+    "price": 89.27,
+    "month": 9,
+    "year": 2021
+  },
+  {
+    "price": 64.84,
+    "month": 10,
+    "year": 2021
+  },
+  {
+    "price": 85.9,
+    "month": 11,
+    "year": 2021
+  },
+  {
+    "price": 193.38,
+    "month": 12,
+    "year": 2021
+  },
+  {
+    "price": 106.71,
+    "month": 1,
+    "year": 2022
+  }
+]
