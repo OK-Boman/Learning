@@ -12,8 +12,9 @@ function getQuote() {
     });
 } 
 getQuote();
-setInterval(getQuote, 900000);
+setInterval(getQuote, 180000);
 
+function getClock(){
 const clockElement = document.getElementById("box1");
 setInterval(() => {
   const date = new Date();
@@ -32,6 +33,8 @@ setInterval(() => {
     clockElement.innerHTML = `${hours}:${minutes} </br> ${weekdayName} </br> ${day}.${month}.${year}`;
   }
 }, 10000);
+}
+getClock();
 
 function hideMenu() {
   let menuOpen = document.querySelector(".toggler").checked;

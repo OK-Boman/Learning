@@ -68,8 +68,10 @@ public class SpotController {
     }
 
     @GetMapping("/spot-price-tomorrow")
-    public ResponseEntity<Map<String, Double>> getSpotPriceTomorrow() throws IOException, JSONException {
+    public ResponseEntity<Map<String, Double>> getSpotPriceTomorrow()
+            throws IOException, JSONException {
         URL url = new URL("https://api.spot-hinta.fi/dayforward");
+        try{
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Content-Type", "application/json");
@@ -108,4 +110,11 @@ public class SpotController {
         result.put("LowestSpot", lowestPriceWithTax);
         return ResponseEntity.ok(result);
     }
+    catch (Exception e) {
+    Map<String, Double> result = new HashMap<>();
+    result.put("Result", 0.0);
+    return ResponseEntity.ok(result);
+
+    }
+}
 }

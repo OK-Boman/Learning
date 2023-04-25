@@ -28,11 +28,16 @@ a {
   padding: 15px;
 }
 
+
 .boxad {
   width: 225px;
   height: 225px;
+  background-color: transparent;
+  padding: 0px;
+  border-radius: 0px;
   margin: 10px;
 }
+
 
 .grid-container {
   display: grid;
@@ -86,6 +91,9 @@ a {
   box-shadow: none;
 }
 
+.box:nth-child(8) {
+  font-size: 0.85rem;
+}
 
 * {
   margin: 0px;

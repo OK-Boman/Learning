@@ -1,87 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script src="../js/scripts.js"></script>
-    <title>Kojelauta / Dashboard</title>
-    <link rel="stylesheet" href="../css/user.css" />
-    <link rel="icon" type="image/png" href="/media/favicon.png" />
-    <!--google ad-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1310848471470635"
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script src="../js/scripts.js"></script>
+  <title>Kojelauta / Dashboard</title>
+  <link rel="stylesheet" href="../css/user.css" />
+  <link rel="icon" type="image/png" href="/media/favicon.png" />
+  <!-- google ad -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1310848471470635"
     crossorigin="anonymous"></script>
+</head>
 
-  </head>
-  <body>
-    <div class="grid-container">
-      <div class="box" id="box1">00:00</div>
-      <div class="box" id="box2"><api-content></api-content></div>
-      <div class="box" id="box3"><api-content></api-content></div>
-      <div class="box" id="box4"><api-content></api-content></div>
-      <div class="box" id="box5">
-        <div id="tekstitv"><img src="" id="tekstitv-img"></div>
-        <form class="tekstitv-form">
-<!--           <a href="#" class="previous">&#8249;</a> -->
-          <input type="text" id="tekstitv-sivu" size="4" placeholder=" 100-899">
-          <input type="submit" onclick="return getTekstiTv()" hidden />
-<!--           <a href="#" class="next">&#8250;</a> -->
-        </form>
-      </div>
+<body>
+  <div class="grid-container">
+    <div class="box" id="box1">wait...</div>
+    <div class="box" id="box2"><api-content></api-content></div>
+    <div class="box" id="box3"><api-content></api-content></div>
+    <div class="box" id="box4"><api-content></api-content></div>
+    <div class="box" id="box5">
+      <div id="tekstitv"><img src="" id="tekstitv-img"></div>
+      <form class="tekstitv-form">
+        <!--           <a href="#" class="previous">&#8249;</a> -->
+        <input type="text" id="tekstitv-sivu" size="4" placeholder=" 100-899">
+        <input type="submit" onclick="return getTekstiTv()" hidden />
+        <!--           <a href="#" class="next">&#8250;</a> -->
+      </form>
+    </div>
 
-      <div class="box" id="box6"><api-content></api-content></div>
-      <div class="box" id="box7"><api-content></api-content></div>
-      <!-- boxad vaihdettu box, miten vaikuttaisi mainoksiin?-->
-      <div class="box" id="box8">
+    <div class="box" id="box6"><api-content></api-content></div>
+    <div class="box" id="box7"><api-content></api-content></div>
+    <div class="box" id="box8">Tiedonsaannin uusi arki.</br></br>
+      -Kojelauta Crew
+    </div>
+    <!--<div class="box" id="box8">
 
-        <script async
+       
+            <script async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1310848471470635"
                 crossorigin="anonymous"></script>
-
+            
             <ins class="adsbygoogle" style="display:inline-block;width:225px;height:225px"
                 data-ad-client="ca-pub-1310848471470635" data-ad-slot="4880479944"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> 
+            -->
 
+    </div>
+  </div>
+  <div class="blocker" onclick="hideMenu()"></div>
+  <div class="nav">
+    <input type="checkbox" class="toggler" />
+    <div class="hamburger">
+      <div></div>
+    </div>
+    <div class="menu">
+      <div class="links">
+        <ul>
+          <li><a href="index.html">Horizontal</a></li>
+          <li><a href="index-mirror.html">Smart Mirror</a></li>
+          <li><a href="index-vertical.html">Vertical</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Log Out</a></li>
+        </ul>
       </div>
     </div>
-    <div class="blocker" onclick="hideMenu()"></div>
-    <div class="nav">
-        <input type="checkbox" class="toggler"/>
-        <div class="hamburger"><div></div></div>
-      <div class="menu">
-        <div class="links">
-          <ul>
-            <li><a href="index.html">Horizontal</a></li>
-            <li><a href="index-mirror.html">Smart Mirror</a></li>
-            <li><a href="index-vertical.html">Vertical</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html">Log Out</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <script src="../js/api_content.js"></script>
-    <script src="../js/api_scripts.js"></script>
-    <script>
-      const clockElement = document.getElementById("box1");
-setInterval(() => {
-  const date = new Date();
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
-  const weekday = date.getDay();
-  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const weekdayName = weekdays[weekday];
+  </div>
+  <script src="../js/api_content.js"></script>
+  <script src="../js/api_scripts.js"></script>
+  <script>
+    const clockElement = document.getElementById("box1");
+    setInterval(() => {
+      const date = new Date();
+      const hours = date.getHours();
+      const minutes = date.getMinutes();
+      const day = date.getDate();
+      const month = date.getMonth() + 1;
+      const year = date.getFullYear();
+      const weekday = date.getDay();
+      const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const weekdayName = weekdays[weekday];
 
-  if (minutes < 10) {
-    clockElement.innerHTML = `${hours}:0${minutes} </br> ${weekdayName} </br> ${day}.${month}.${year}`;
-  } else {
-    clockElement.innerHTML = `${hours}:${minutes} </br> ${weekdayName} </br> ${day}.${month}.${year}`;
-  }
-}, 10000);
-    </script>
-    
-  </body>
+      if (minutes < 10) {
+        clockElement.innerHTML = `${hours}:0${minutes} </br> ${weekdayName} </br> ${day}.${month}.${year}`;
+      } else {
+        clockElement.innerHTML = `${hours}:${minutes} </br> ${weekdayName} </br> ${day}.${month}.${year}`;
+      }
+    }, 10000);
+  </script>
+
+</body>
+
 </html>

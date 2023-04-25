@@ -24,7 +24,7 @@ public class InflationController {
         URL url = new URL("https://api.api-ninjas.com/v1/inflation?country=finland");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestProperty("accept", "application/json");
-        connection.setRequestProperty("X-Api-Key", "xxxxxxx");
+        connection.setRequestProperty("X-Api-Key", "WH6WAh34f4LjkUqV3S68jw==DWTVZQ85nKza6sD9");
         InputStream responseStream = connection.getInputStream();
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = mapper.readTree(responseStream);

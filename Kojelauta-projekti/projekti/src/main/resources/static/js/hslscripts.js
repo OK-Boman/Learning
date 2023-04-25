@@ -1,5 +1,5 @@
 function getHsl() {
-    let address = "Keilaranta";
+    let address = "Hakaniemi";
     document.getElementById("address").innerHTML = address;
     let html =""
     HTTP.get("hsl/"+address).then(hsls => {
@@ -12,4 +12,4 @@ function getHsl() {
         document.getElementById("hslTable").innerHTML = html;
     });
 }
-setInterval(getHsl(), 360000)
+setInterval(getHsl(), 180000)

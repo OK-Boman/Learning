@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class PriceController {
 
-    static String apiKey = "xxxxxxx";
+    static String apiKey = "jshRBlq4iQWPZHWFTbBnPQ==RlR0xb60QGvHobuI";
 
     @GetMapping(value = "/euribor")
     // return json
@@ -38,7 +38,7 @@ public class PriceController {
     private String getStock(@PathVariable String symbol) throws Exception {
         String userSymbol = symbol;
         String url = "https://finnhub.io/api/v1/quote?symbol=" + userSymbol
-                + "&token=xxxxxx";
+                + "&token=cevrtriad3i9aa87og6gcevrtriad3i9aa87og70";
         RestTemplate rt = new RestTemplate();
         ResponseEntity<String> response = rt.exchange(url, HttpMethod.GET, null, String.class);
         String json = response.getBody();

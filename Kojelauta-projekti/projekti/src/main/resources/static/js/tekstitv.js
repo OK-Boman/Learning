@@ -10,4 +10,4 @@ function getTekstiTv() {
   return false;
 }
 
-setInterval(getTekstiTv(), 10000);
+setInterval(getTekstiTv(), 180000);

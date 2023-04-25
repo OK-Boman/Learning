@@ -15,17 +15,18 @@
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="icon" type="image/png" href="/media/favicon.png">
+
     <!--Avaa responsen luettavaksi dataksi-->
     <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
-    <!--Google ad-->
+
+    <!-- google ad -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1310848471470635"
         crossorigin="anonymous"></script>
-    
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="box" id="box1">00:00</div>
+        <div class="box" id="box1">wait...</div>
         <div class="box">
             <p>
             <h3>Electricity today</h3><br>
@@ -44,31 +45,28 @@
             <div id="outputti">"Any sufficiently advanced technology is indistinguishable from magic."
                 </br>-Arthur Clarke</div>
         </div>
-        <div class="box"><div id="tekstitv"><img src="" id="tekstitv-img"></div></div>
         <div class="box">
-            <p id="address"></p>
-            <table id="table">
-                <thead>
-                    <tr>
-                        <th id="time">Time</th>
-                        <th id="stop">To</th>
-                        <th id="vehicle">Line </th>
-                    </tr>
-                </thead>
-                <tbody id="hslTable">
-                </tbody>
-            </table>
-
+            <div id="tekstitv"><img src="" id="tekstitv-img"></div>
+        </div>
+        <div class="box">
+        </br>
+            <h3>Bitcoin / Eur</h3>
+            <p id="stock-change"></p>
+            <p id="stock-price"></p>
+        </br>
         </div>
         <div class="box">
             <p id="city"></p>
             <p id="weather"></p>
             <img src="" id="weather-icon">
         </div>
+        <div class="box">Tervetuloa sivullemme! Kirjaudu sisään jotta näkisit personoitua dataa ja jotta voisit vapautaa aikaa arkeesi.
+            -Kojelauta Crew
+        </div>
         
-        <div class="boxad">
+        <!-- <div class="boxad">
 
-
+            
             <script async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1310848471470635"
                 crossorigin="anonymous"></script>
@@ -77,51 +75,53 @@
                 data-ad-client="ca-pub-1310848471470635" data-ad-slot="4880479944"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> 
+            -->
 
         </div>
-    
     </div>
     <div class="blocker" onclick="hideMenu()"></div>
     <div class="nav">
-        <input type="checkbox" class="toggler"/>
-        <div class="hamburger"><div></div></div>
-      <div class="menu">
-        <div class="links">
-          <ul>
-            <li><a href="index.html" id="atm">Horizontal</a></li>
-            <li><a href="index-mirror.html">Smart Mirror</a></li>
-            <li><a href="index-vertical.html">Vertical</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><span>
-                <!--kirjautumisnappi-->
-                <div id="g_id_onload"
-                    data-client_id="451279499277-erue0nnro493cel996dcbk6aj28iji58.apps.googleusercontent.com"
-                    data-callback="handleCredentialResponse">
-                    <script type="module">
-                        import jwtDecode from 'https://esm.run/jwt-decode';
-                        window.handleCredentialResponse = (response) => {
-
-                            let responsePayload = jwtDecode(response.credential);
-                            console.log("Email: " + responsePayload.email);
-                            postUser(responsePayload.sub, responsePayload.email)
-                            let userId = responsePayload.sub
-                            sessionStorage.setItem('userId', userId);
-                            var obj = sessionStorage.userId;
-                            window.location.replace('index-user.html');
-                        }
-                    </script>
-                    <div class="g_id_signin" data-type="standard"></div>
-                </div>
-            </span></li>
-          </ul>
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger">
+            <div></div>
         </div>
-      </div>
+        <div class="menu">
+            <div class="links">
+                <ul>
+                    <li><a href="index.html" id="atm">Horizontal</a></li>
+                    <li><a href="index-mirror.html">Smart Mirror</a></li>
+                    <li><a href="index-vertical.html">Vertical</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><span>
+                            <!--kirjautumisnappi-->
+                            <div id="g_id_onload"
+                                data-client_id="451279499277-erue0nnro493cel996dcbk6aj28iji58.apps.googleusercontent.com"
+                                data-callback="handleCredentialResponse">
+                                <script type="module">
+                                    import jwtDecode from 'https://esm.run/jwt-decode';
+                                    window.handleCredentialResponse = (response) => {
+
+                                        let responsePayload = jwtDecode(response.credential);
+                                        console.log("Email: " + responsePayload.email);
+                                        postUser(responsePayload.sub, responsePayload.email)
+                                        let userId = responsePayload.sub
+                                        sessionStorage.setItem('userId', userId);
+                                        var obj = sessionStorage.userId;
+                                        window.location.replace('index-user.html');
+                                    }
+                                </script>
+                                <div class="g_id_signin" data-type="standard"></div>
+                            </div>
+                        </span></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <script src="../js/toolsscripts.js"></script>
     <script src="../js/weather.js"></script>
     <script src="../js/spotprice.js"></script>
-    <script src="../js/hslscripts.js"></script>
+    <script src="../js/price.js"></script>
     <script src="../js/tekstitv.js"></script>
 </body>
 

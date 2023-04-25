@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class JokeController {
 
-    static String apiKey = "xxxxxx";
+    static String apiKey = "D+udDZwtqBj1ZpC97GyRSg==WuQ6PMCf9RRnvKfw";
     String url = "https://api.api-ninjas.com/v1/jokes?limit=1";
 
     @GetMapping(value = "/joke")

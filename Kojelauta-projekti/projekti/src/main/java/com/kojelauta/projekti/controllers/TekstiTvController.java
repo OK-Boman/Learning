@@ -16,12 +16,12 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class TekstiTvController {
 
-    static String apiKey = "xxxxx";
+    static String apiKey = "d2794fa8a199a79aba2fb09596a12292";
 
     @GetMapping(value = "/tekstitv/{userSivu}/{userAlasivu}")
     private String getTekstiTv(@PathVariable int userSivu, @PathVariable int userAlasivu) {
         // get the image from url
-        String url = "https://external.api.yle.fi/v1/teletext/images/"+userSivu+"/"+userAlasivu+".png?app_id=xxxxx&app_key="+apiKey;
+        String url = "https://external.api.yle.fi/v1/teletext/images/"+userSivu+"/"+userAlasivu+".png?app_id=2d08e6e9&app_key="+apiKey;
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.set("Accept", "image/png");

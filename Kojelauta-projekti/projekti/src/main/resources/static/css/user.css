@@ -31,6 +31,7 @@ a {
 }
 
 
+
 .weather-api {
   text-align: center;
 }
@@ -57,12 +58,10 @@ input[type="button"] {
   right: 2%;
   top: 2%;
 }
-
 .hsl-api {
   font-size: 1rem;
   top: 0;
 }
-
 #table {
   text-align: left;
   border-spacing: 12px 5px;
@@ -113,16 +112,26 @@ img#weather-icon {
   display: grid;
 }
 
+#box8 {
+  font-size: 0.85rem;
+}
+
+/* ad mainos */
+/*#box8 {
+  width: 225px;
+  height: 225px;
+  background-color: transparent;
+  padding: 0px;
+  border-radius: 0px;
+  margin: 10px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+
+}*/
+
 #tekstitv {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#box8 {
-  width: 225px;
-  height: 225px;
-  margin: 10px;
 }
 
 #tekstitv img {
@@ -136,7 +145,6 @@ img#weather-icon {
   display: flex;
   justify-content: center;
 }
-
 /* MENU CSS BELOW */
 .toggler {
   /* ALWAYS KEEPING THE TOGGLER OR THE CHECKBOX ON TOP OF EVERYTHING :  */
@@ -168,7 +176,7 @@ img#weather-icon {
 
 /* CREATING THE MIDDLE LINE OF THE HAMBURGER : */
 
-.hamburger>div {
+.hamburger > div {
   position: relative;
   top: 0;
   left: 0;
@@ -181,8 +189,8 @@ img#weather-icon {
 /* CREATING THE TOP AND BOTTOM LINES : 
 TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
-.hamburger>div::before,
-.hamburger>div::after {
+.hamburger > div::before,
+.hamburger > div::after {
   content: "";
   position: absolute;
   top: -10px;
@@ -192,17 +200,17 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   transition: all 0.4s ease;
 }
 
-.hamburger>div::after {
+.hamburger > div::after {
   top: 10px;
 }
 
 /* IF THE TOGGLER IS IN ITS CHECKED STATE, THEN SETTING THE BACKGROUND OF THE MIDDLE LAYER TO COMPLETE BLACK AND OPAQUE :  */
 
-.toggler:checked+.hamburger>div {
+.toggler:checked + .hamburger > div {
   background: rgba(0, 0, 0, 0);
 }
 
-.toggler:checked+.hamburger>div::before {
+.toggler:checked + .hamburger > div::before {
   top: 0;
   transform: rotate(45deg);
   background: antiquewhite;
@@ -210,7 +218,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* AND ROTATING THE TOP AND BOTTOM LINES :  */
 
-.toggler:checked+.hamburger>div::after {
+.toggler:checked + .hamburger > div::after {
   top: 0;
   transform: rotate(135deg);
   background: antiquewhite;
@@ -225,7 +233,6 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   width: 250px;
   pointer-events: none;
 }
-
 .menu {
   background: rgba(0, 0, 0, 0.666);
   width: 0px;
@@ -236,7 +243,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
 
-.toggler:checked~.menu {
+.toggler:checked ~ .menu {
   width: 250px;
 }
 
@@ -250,10 +257,9 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   content: " ";
   background: rgba(0, 0, 0, 0);
 }
-
 /* STYLING THE LIST :  */
 
-.menu>div>ul {
+.menu > div > ul {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -264,12 +270,12 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   visibility: hidden;
 }
 
-.menu>div>ul>li {
+.menu > div > ul > li {
   list-style: none;
   padding: 0.5rem;
 }
 
-.menu>div>ul>li>a {
+.menu > div > ul > li > a {
   color: antiquewhite;
   text-decoration: none;
   font-size: 1.2rem;
@@ -278,13 +284,13 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
 
-.toggler:checked~.menu>div>ul {
+.toggler:checked ~ .menu > div > ul {
   transition: visibility 0.4s ease;
   transition-delay: 0.1s;
   visibility: visible;
 }
 
-.toggler:checked~.menu>div>ul>li>a:hover {
+.toggler:checked ~ .menu > div > ul > li > a:hover {
   text-decoration: underline;
   color: #fa8833;
 }

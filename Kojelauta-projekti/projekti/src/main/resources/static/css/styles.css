@@ -2,6 +2,7 @@ body {
   background-color: #222;
 }
 
+
 a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -28,9 +29,13 @@ a {
   padding: 15px;
 }
 
+
 .boxad {
   width: 225px;
   height: 225px;
+  background-color: transparent;
+  padding: 0px;
+  border-radius: 0px;
   margin: 10px;
 }
 
@@ -78,13 +83,22 @@ a {
   padding-right: 6px;
   max-height: auto;
 }
-.box:nth-child(6) {
-  display: block;
-  font-size: 1rem;
+
+.box:nth-child(6){
+
+
+  display: inline-grid;
+  font-size: 0.85rem;
+  
 }
+
 .box:nth-child(7) {
   display: inline-grid;
   justify-items: center;
+}
+
+.box:nth-child(8) {
+  font-size: 0.85rem;
 }
 
 p#city {
@@ -148,7 +162,7 @@ p#address {
 
 /* CREATING THE MIDDLE LINE OF THE HAMBURGER : */
 
-.hamburger > div {
+.hamburger>div {
   position: relative;
   top: 0;
   left: 0;
@@ -161,8 +175,8 @@ p#address {
 /* CREATING THE TOP AND BOTTOM LINES : 
   TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
-.hamburger > div::before,
-.hamburger > div::after {
+.hamburger>div::before,
+.hamburger>div::after {
   content: "";
   position: absolute;
   top: -10px;
@@ -172,17 +186,17 @@ p#address {
   transition: all 0.4s ease;
 }
 
-.hamburger > div::after {
+.hamburger>div::after {
   top: 10px;
 }
 
 /* IF THE TOGGLER IS IN ITS CHECKED STATE, THEN SETTING THE BACKGROUND OF THE MIDDLE LAYER TO COMPLETE BLACK AND OPAQUE :  */
 
-.toggler:checked + .hamburger > div {
+.toggler:checked+.hamburger>div {
   background: rgba(0, 0, 0, 0);
 }
 
-.toggler:checked + .hamburger > div::before {
+.toggler:checked+.hamburger>div::before {
   top: 0;
   transform: rotate(45deg);
   background: antiquewhite;
@@ -190,7 +204,7 @@ p#address {
 
 /* AND ROTATING THE TOP AND BOTTOM LINES :  */
 
-.toggler:checked + .hamburger > div::after {
+.toggler:checked+.hamburger>div::after {
   top: 0;
   transform: rotate(135deg);
   background: antiquewhite;
@@ -204,6 +218,7 @@ p#address {
   filter: drop-shadow(0px 0px 12px #000);
   width: 250px;
 }
+
 .menu {
   background: rgba(0, 0, 0, 0.666);
   width: 0px;
@@ -214,7 +229,7 @@ p#address {
 
 /* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
 
-.toggler:checked ~ .menu {
+.toggler:checked~.menu {
   width: 250px;
 }
 
@@ -228,9 +243,10 @@ p#address {
   content: " ";
   background: rgba(0, 0, 0, 0);
 }
+
 /* STYLING THE LIST :  */
 
-.menu > div > ul {
+.menu>div>ul {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -241,12 +257,12 @@ p#address {
   visibility: hidden;
 }
 
-.menu > div > ul > li {
+.menu>div>ul>li {
   list-style: none;
   padding: 0.5rem;
 }
 
-.menu > div > ul > li > a {
+.menu>div>ul>li>a {
   color: antiquewhite;
   text-decoration: none;
   font-size: 1.2rem;
@@ -255,13 +271,13 @@ p#address {
 
 /* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
 
-.toggler:checked ~ .menu > div > ul {
+.toggler:checked~.menu>div>ul {
   transition: visibility 0.4s ease;
   transition-delay: 0.1s;
   visibility: visible;
 }
 
-.toggler:checked ~ .menu > div > ul > li > a:hover {
+.toggler:checked~.menu>div>ul>li>a:hover {
   text-decoration: underline;
   color: #fa8833;
 }
