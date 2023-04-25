@@ -28,13 +28,11 @@ a {
   padding: 15px;
 }
 
-/* mainokselle
 .boxad {
   width: 225px;
   height: 225px;
   margin: 10px;
 }
-*/
 
 .grid-container {
   display: grid;
@@ -87,14 +85,6 @@ a {
 .box:nth-child(7) {
   display: inline-grid;
   justify-items: center;
-}
-
-/* manuaalien mainos, poista kun lisäät adsensen */
-.box:nth-child(8) {
-  background-image: url("/media/mainos-esim3.png");
-  border-radius: 0px;
-  background-size: cover;
-  background-position: center;
 }
 
 p#city {

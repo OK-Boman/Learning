@@ -6,6 +6,10 @@
     <title>Kojelauta / Dashboard</title>
     <link rel="stylesheet" href="../css/user.css" />
     <link rel="icon" type="image/png" href="/media/favicon.png" />
+    <!--google ad-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1310848471470635"
+    crossorigin="anonymous"></script>
+
   </head>
   <body>
     <div class="grid-container">
@@ -26,7 +30,19 @@
       <div class="box" id="box6"><api-content></api-content></div>
       <div class="box" id="box7"><api-content></api-content></div>
       <!-- boxad vaihdettu box, miten vaikuttaisi mainoksiin?-->
-      <div class="box" id="box8"></div>
+      <div class="box" id="box8">
+
+        <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1310848471470635"
+                crossorigin="anonymous"></script>
+
+            <ins class="adsbygoogle" style="display:inline-block;width:225px;height:225px"
+                data-ad-client="ca-pub-1310848471470635" data-ad-slot="4880479944"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+      </div>
     </div>
     <div class="blocker" onclick="hideMenu()"></div>
     <div class="nav">
@@ -64,7 +80,7 @@ setInterval(() => {
   } else {
     clockElement.innerHTML = `${hours}:${minutes} </br> ${weekdayName} </br> ${day}.${month}.${year}`;
   }
-}, 1000);
+}, 10000);
     </script>
     
   </body>

@@ -8,4 +8,4 @@ function getWeather(city) {
     document.getElementById("weather-icon").src = iconUrl;
   });
 }
-setInterval(getWeather("Helsinki"), 1000);
+setInterval(getWeather("Helsinki"), 100000);

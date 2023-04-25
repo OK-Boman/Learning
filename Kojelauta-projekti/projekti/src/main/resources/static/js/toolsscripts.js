@@ -31,7 +31,7 @@ setInterval(() => {
   } else {
     clockElement.innerHTML = `${hours}:${minutes} </br> ${weekdayName} </br> ${day}.${month}.${year}`;
   }
-}, 1000);
+}, 10000);
 
 function hideMenu() {
   let menuOpen = document.querySelector(".toggler").checked;

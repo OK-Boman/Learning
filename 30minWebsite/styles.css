@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Courier New", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 3s ease-in-out;
+
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 9px;
+    }
+}
+
+
+.background-metsavero {
+    background-image: url('metsavero.jpg');
+}
+
+.background-waves {
+    background-image: url('waves.jpg');
+}
+
+.background-woodland-pattern {
+    background-image: url('woodland_pattern.jpg');
+}
+
+/*.parent-container {
+    position: relative;
+
+}
+
+.prompt {
+    position: absolute;
+    font-size: 0.5rem;
+    color: gray;
+    opacity: 0.5;
+
+}*/
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 5px;
+}
+
+.japanese,
+.binary,
+.ukrainian {
+    display: block;
+}
+
+.english {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: red;
+}
+
+#content {
+    min-height: 60vh;
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+@keyframes fadeToBlack {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
