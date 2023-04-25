@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class TekstiTvController {
 
-    static String apiKey = "d2794fa8a199a79aba2fb09596a12292";
+    static String apiKey = "xxxapikeyxxx";
 
     @GetMapping(value = "/tekstitv/{userSivu}/{userAlasivu}")
     private String getTekstiTv(@PathVariable int userSivu, @PathVariable int userAlasivu) {

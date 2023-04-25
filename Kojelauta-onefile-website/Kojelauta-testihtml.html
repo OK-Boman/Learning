@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Set the background color to glossy black */
+        body {
+            background-color: #000002da;
+        }
+
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Style the square boxes */
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: #1d1d1d;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFF0;
+            font-size: 4vw;
+            /* Add space around the boxes */
+            margin: 20px;
+            box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.723);
+        }
+
+        /* Center the boxes horizontally and vertically */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Style the hamburger menu */
+        .menu {
+            position: absolute;
+            color: #FFFFF0;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0px;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+
+        .menu span {
+            width: 30px;
+            height: 3px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            transition: all 0.3s linear;
+            position: relative;
+            transform-origin: 1px;
+        }
+
+        /* Style box 3 to have the image as background */
+        .box:nth-child(3) {
+            background-image: url('https://picsum.photos/600?grayscale');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Add the hamburger menu -->
+    <button class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="container">
+        <!-- Add the square boxes -->
+        <div class="box">Welcome!</div>
+        <div class="box">weather</div>
+        <div class="box"></div>
+        <div class="box">quote</div>
+        <div class="box">Box 5</div>
+        <div class="box" id="clock">00:00</div>
+        <div class="box">Box 7</div>
+        <div class="box">Ad</div>
+
+    </div>
+
+    <script>
+        // Get a reference to the clock element
+        const clockElement = document.getElementById('clock');
+
+        // Update the clock every second
+        setInterval(() => {
+            //
+            // Get the current date and time
+            const date = new Date();
+
+            // Extract the hours and minutes from the date
+            const hours = date.getHours().toString().padStart(2, '0');
+            const minutes = date.getMinutes().toString().padStart(2, '0');
+
+            // Update the clock element with the current time
+            clockElement.textContent = `${hours}:${minutes}`;
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

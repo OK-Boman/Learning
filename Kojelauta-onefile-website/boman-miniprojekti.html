@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Mini Project Boman</title>
+    <style>
+        body {
+            background-color: #222;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: #1d1d1d;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: antiquewhite;
+            font-size: 4vw;
+            font-family: 'Courier New', monospace;
+            margin: 20px;
+            box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.723);
+            padding: 5px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+        output {
+            font-size: 1.5vw;
+            font-family: 'Courier New', monospace;
+            color: antiquewhite;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: antiquewhite;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+        }
+
+        .box:nth-child(3) {
+            background-image: url('https://picsum.photos/600?grayscale');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .box:nth-child(4) {
+            font-size: 1vw;
+        }
+
+        .box:nth-child(5) {
+            font-size: 1vw;
+        }
+
+        .box:nth-child(6) {
+            background-image: url('https://storage.googleapis.com/ulostulo/outpic.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .box:nth-child(7) {
+            font-size: 0.9vw;
+            color: rgb(111, 201, 111);
+        }
+
+        button {
+            background-color: #333;
+            color: rgb(94, 161, 173);
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        
+    </style>
+    
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box" id="clock">00:00</div>
+        <div class="box"><button id="getJokeButton">Amuse me.</button></br><button id="getQuoteButton">Quote
+                me.</button></div>
+        <div class="box"></div>
+        <div class="box">
+            <div id="outputti">"Any sufficiently advanced technology is indistinguishable from magic."</br>- Arthur Clarke -</div>
+        </div>
+        <div class="box">
+            <div id="output">"Knock, knock."</br>
+                "Who's there?"</br>
+            </br>
+                ...</br>
+                very</br>
+                long</br>
+                pause</br>
+                ...</br>
+            </br>
+                "Java."</div>
+        </div>
+        <div class="box"></div>
+        <div class="box">Project 30.12.22</br></br>-JavaSript-clock</br>-Random Picture-API</br>-Random Joke-Api</br>-Random Quote-Api</br>-Serverless modified
+            picture, changes every day</div>
+        <div class="box">Ad</div>
+
+    </div>
+
+    <script>
+
+        function getJoke() {
+            fetch('https://v2.jokeapi.dev/joke/Any?blacklistFlags=racist,sexist&format=txt')
+                .then(response => response.text())
+                .then(data => {
+                    const joke = data.replace(/\n/g, '<br>');
+
+                    document.getElementById('output').innerHTML = joke;
+                });
+        }
+        document.getElementById('getJokeButton').addEventListener('click', getJoke);
+
+    </script>
+
+    <script>
+
+        function getQuote() {
+
+            document.getElementById('outputti').innerHTML = '';
+            fetch('https://api.quotable.io/random')
+                .then(response => response.json())
+                .then(data => {
+                    const quote = data.content;
+                    const author = data.author;
+                    const quoteElement = document.createElement('p');
+                    quoteElement.innerHTML = `"${quote}" </br> - ${author} -`;
+
+                    document.getElementById('outputti').appendChild(quoteElement);
+                });
+        }
+        document.getElementById('getQuoteButton').addEventListener('click', getQuote);
+
+    </script>
+
+    <script>
+
+        const clockElement = document.getElementById('clock');
+        setInterval(() => {
+            const date = new Date();
+            const hours = date.getHours().toString().padStart(2, '0');
+            const minutes = date.getMinutes().toString().padStart(2, '0');
+            clockElement.textContent = `${hours}:${minutes}`;
+        }, 1000);
+    </script>
+
+    <footer>
+        <p>Kojelauta Co. / K.Boman</p>
+    </footer>
+
+</body>
+
+</html>
